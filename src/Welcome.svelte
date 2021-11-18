@@ -3,10 +3,10 @@
     import {name} from './store.js';
     export let status = true;
 
-    const handleClick = () => {
-        // name = e.detail;
-        // $name = e.target.value;
-        name.update(e => e.target.value);
+    const handleClick = (e) => {
+        //name = e.detail;
+        $name = e.target.value;
+         //name.update(e => e.target.value);
         
         console.log('e detail ', e.target.value)
     }
@@ -19,7 +19,7 @@
 <main> 
    
 {#if status === false}
-    <h3>Welcome {name}!</h3>
+    <h3>Welcome {$name}!</h3>
 {:else}
  <h2>What's Your Name, Super-Organizer?</h2>
     <!-- <input type='text' bind:value={$name} on:click={handleClick}/> -->

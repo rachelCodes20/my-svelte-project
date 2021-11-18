@@ -6,7 +6,7 @@
     export let todo;
     export let index;
     // let todo = ''
-	// let todos = [];
+	let todos = [];
 
     const deleteHandler = index => {
         //we  need to send indx data when this is invoked
