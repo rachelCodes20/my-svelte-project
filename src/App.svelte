@@ -3,15 +3,15 @@
 	import {createEventDispatcher} from 'svelte';
 	const dispatch = createEventDispatcher();
 	// import { todos } from './store.js';
+	import name from './Welcome.svelte';
 	import NavBar from './NavBar.svelte';
 	import Welcome from './Welcome.svelte';
 	import Todos from './Todos.svelte';
 	import Bye from './Bye.svelte'
 	let todo = '';
 	let todos = [];
-	//testing
-	// $name:"";
 
+	
 	const submitTodo = (e) => {
 		//why does this need to be turned into a string again?
 		
@@ -35,13 +35,15 @@
 	
 <main>
 	<h3>Get Started with My List!</h3>
-		<form >
+		<form>
 	  <!-- the todo string above with be assign a value eql to whatever input is -->
-	  
+	  <div>
+		  
+	  </div>
 	  <input type='text' required bind:value={todo}/>
 	  <!-- how can i ensure the field doesn't register an empty string? -->
 	  {#if todo !== ''}
-	  <button type='submit' on:click|preventDefault={submitTodo} >Add Todo</button>
+	  <button type='submit' on:click|preventDefault={submitTodo}>Add Todo</button>
 	  {/if}
 	  </form>
 	  {#if !todos.length}
@@ -58,7 +60,7 @@
 
 <style>
 	
-	main {
+main {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
@@ -71,20 +73,12 @@
 	border: 1px solid #ccc;
 	border-radius: 4px;
 	font-size: inherit;
+	margin: 0 auto;
 	/* box-sizing: border-box; */
 
 	} 
-/* 	
-	main {
-	
-	text-align: center;
-	padding: 1em;
-	max-width: 240px;
-	margin: 0 auto;
 
-
-} */
-	button {
+	/* button {
         
 		min-width: 100px;
 		margin: 0 auto;
@@ -94,7 +88,7 @@
         border: 1px solid #ccc;
         max-width: fit-content;
         border-radius: 2px;
-        }
+        } */
 
 	@media (min-width: 640px) {
 		main {

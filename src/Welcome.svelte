@@ -25,30 +25,21 @@
     <!-- <input type='text' bind:value={$name} on:click={handleClick}/> -->
     <input type='text' value={$name} on:input={handleClick}/>
     <!-- this index will be sent to deleteTodo in App to remove the todo -->
-    <button type='button' on:click={nameSubmitted}>Submit</button>
+    <button type='button' class="welcomeButton" on:click={nameSubmitted}>Submit</button>
 {/if}
 
 </main>
 <style>
-    main {
+    /* main {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
-	}
+	} */
 
-	input {
-	
-	padding: 12px 20px;
-	margin: 8px 0;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: inherit;
-	/* box-sizing: border-box; */
 
-	} 
 
-    button {
+    /* button {
         
 		min-width: 100px;
 		margin: 0 auto;
@@ -58,7 +49,7 @@
         border: 1px solid #ccc;
         max-width: fit-content;
         border-radius: 2px;
-        }
+        } */
 
 
 </style>
