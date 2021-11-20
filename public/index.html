@@ -5,13 +5,124 @@
 	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
 	<title>Svelte app</title>
+	<style>
 
+		/* div{
+			height:400px;
+			width:400px;
+			background-color: steelblue;
+		} */
+
+		/* .firstBarGraph :global(div) { */
+		div {
+		font: 10px sans-serif;
+		/* background-color: steelblue; */
+		text-align: right;
+		padding: 3px;
+		margin: 1px;
+		color: white;
+	}
+	</style>
 	<link rel='icon' type='image/png' href='/favicon.png'>
 	<link rel='stylesheet' href='/build/bundle.css'>
-
+	<script src ="https://d3js.org/d3.v4.min.js"></script>
 	<script defer src='/build/bundle.js'></script>
+
 </head>
 
 <body>
+	<!-- <svg width="100" height="100"> -->
+	<!-- <svg width="600" height="500"></svg>
+		<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+	  </svg>
+	  <div class="firstBarGraph"></div>
+	  <div class="firstParagraph"> -->
+	  	<!-- <p>Just here writing words in paragraph 1</p> -->
+	  <!-- </div> -->
+	  
+	  <script>
+		// var svg = d3.select("svg"),
+        // margin = 200,
+        // width = svg.attr("width") - margin,
+        // height = svg.attr("height") - margin;
+
+		//   d3.selectAll("div")
+		//   	.on("mouseover", function(){
+		// 		  d3.select(this)
+		// 		    .transition()
+        //   			.duration(1000)
+		// 		  	.style("background-color", "orange")
+		// 			  console.log(d3.event)
+		// 			  console.log(d3.mounse(this))
+		// 			})
+		// 	.on('mouseout', function(){
+		// 		d3.select(this)
+		// 		  .style("background-color", "steelblue")
+		// 	})
+			 
+		// var svg = d3.select("body")
+		// 	  .append("svg")
+		// 	  .attr("width", 500)
+		// 	  .attr("height", 500)
+
+		// 	  var bar1 = svg.append("rect")
+		// 			.attr("fill", "blue")
+		// 			.attr("x", 100)
+		// 			.attr("height", 20)
+		// 			.attr("width", 10)
+		// 	var bar2 = svg.append("rect")
+		// 			.attr("fill", "blue")
+		// 			.attr("x", 200)
+		// 			.attr("height", 20)
+		// 			.attr("width", 10)
+		// 	update();
+		
+		// 	function update(){
+		// 	bar1.transition()
+		// 		.ease(d3.easeLinear)
+		// 		.duration(2000)
+		// 		.attr("height", 100)
+		// 	bar2.transition()
+		// 		.ease(d3.easeLinear)
+		// 		.duration(2000)
+		// 		.delay(2000)
+		// 		.attr("height, 100")
+		// }
+
+	// 	var svg = d3.select("svg"),
+    //     margin = 200,
+    //     width = svg.attr("width") - margin,
+    //     height = svg.attr("height") - margin;
+
+
+    // var xScale = d3.scaleBand().range ([0, width]).padding(0.4),
+    //     yScale = d3.scaleLinear().range ([height, 0]);
+
+    // var g = svg.append("g")
+    //            .attr("transform", "translate(" + 100 + "," + 100 + ")");
+	// 	var myData = ["Hello World!", "how many characters", "are in", "these sentences"];
+     
+        // var p = d3.select("body")
+        //     .selectAll("p")
+        //     .data(myData)
+		// 	.enter().append("p")
+        //     .text(function (d, i) {
+        //         return d;
+        //     });
+
+			// var data = [30, 86, 168, 281, 303, 365];
+			// // let = el; 
+			// d3.select(el)
+			// .selectAll("div")
+			// .data(data)
+			// .enter()
+			// .append("div")
+			// .style("width", function(d) {
+			// 	return d + "px";
+			// })
+			// .text(function(d) {
+			// 	return d;
+			// });
+	  </script>
 </body>
 </html>

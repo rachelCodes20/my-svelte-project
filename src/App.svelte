@@ -2,8 +2,7 @@
 <script>
 	import {createEventDispatcher} from 'svelte';
 	const dispatch = createEventDispatcher();
-	// import { todos } from './store.js';
-	import name from './Welcome.svelte';
+	//import { todos } from './store.js';
 	import NavBar from './NavBar.svelte';
 	import Welcome from './Welcome.svelte';
 	import Todos from './Todos.svelte';
@@ -11,19 +10,22 @@
 	let todo = '';
 	let todos = [];
 
-	
-	const submitTodo = (e) => {
+	//todos.subscribe((todos) => console.log('subscribe called ', todos));
+
+	const submitTodo = () => {
 		//why does this need to be turned into a string again?
-		
-		todos = [todo,...todos];
+		console.log('todo: ', todo)
+		 todos = [todo,...todos];
+		// todos.update(todoItems => [todo, ...todoItems])
         //start from a fresh string
         todo = '';
 		console.log('todo array', todos)
 	};
+
 	const deleteTodo = event => {
 		//when i click on todo list item that i bc event.detail
 		todos = todos.filter((todo,i) => i !== event.detail)
-		// console.log('event val', event.detail)
+		todos.update(() => [...todos])
 		// console.log('todos', todo)
 	}
 
@@ -49,11 +51,12 @@
 	  {#if !todos.length}
 		  <p>Add Some Todos!</p>
 	  {:else}
+	  	<ol>
 		  {#each todos as todo, index}
 			  <!-- <input bind:value={todos[index]}> -->
-			  <Todos todo={todo} index={index} on:deleteTodo={deleteTodo}/> 
-		
+			  <li><Todos todo={todo} index={index} on:deleteTodo={deleteTodo}/> </li>
 		  {/each}
+		</ol>
 	  {/if}  
 	  <Bye/>
 </main>

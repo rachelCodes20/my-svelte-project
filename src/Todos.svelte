@@ -5,37 +5,46 @@
     export let todo;
     export let index;
     // let todo = ''
-	let todos = [];
+	import {todos} from './store';
 
     const deleteHandler = index => {
         //we  need to send indx data when this is invoked
         dispatch('deleteTodo', index)
     }
-    var collapseTodoItem = document.getElementsByClassName("collapsible");
+
+    var collapseTodoItem = document.getElementsByClassName("flat");
 
     for (let i = 0; i < collapseTodoItem.length; i++) {
-        collapseTodoItem[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
+        let currBtn = collapseTodoItem[i];
+        currBtn.addEventListener("click", function() {
+        
+        collapseTodoItem[i].classList.add("collapsible");
+        var content = this.nextElementSibling;
+        // if (content.style.display === "block") {
+        // content.style.display = "none";
+        // } else {
+        // content.style.display = "block";
+        // }
+        if (currBtn.class === "collapsible" ) {
+        content.style.display = "block";
+        } else {
+        content.style.display = "none";
+        }
+    });
 }
 
 </script>
 <main>
-    <!-- <div> -->
-        <!-- <p class="collapsible">{todo}</p>  -->
-        <button type="button" class="collapsible">{todo}</button> 
+    <script>
+       
+    </script>
+    
+        <button type="button" id=todoBtn class="flat" >{todo}</button> 
         <div class="content">
-            <p >Cost of {todo}: $5 </p>
+            <p >Cost of {todo}: $$ </p>
         </div>
         <!-- this index will be sent to deleteTodo in App to remove the todo -->
         <button  on:click={deleteHandler(index)}>X</button><br/>
-    <!-- </div> -->
 </main>
     
 
