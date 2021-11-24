@@ -12,26 +12,25 @@
         dispatch('deleteTodo', index)
     }
 
-    var collapseTodoItem = document.getElementsByClassName("flat");
+    var collapseTodoItem = document.getElementsByClassName("collapsible");
 
-    for (let i = 0; i < collapseTodoItem.length; i++) {
+    const open = () => {
+        for (let i = 0; i < collapseTodoItem.length; i++) {
         let currBtn = collapseTodoItem[i];
         currBtn.addEventListener("click", function() {
-        
-        collapseTodoItem[i].classList.add("collapsible");
-        var content = this.nextElementSibling;
-        // if (content.style.display === "block") {
-        // content.style.display = "none";
-        // } else {
-        // content.style.display = "block";
-        // }
-        if (currBtn.class === "collapsible" ) {
+        // collapseTodoItem[i].classList.add("collapsible");
+        var content = currBtn.nextElementSibling;
+        if (content.style.display === "none" ) {
         content.style.display = "block";
         } else {
         content.style.display = "none";
         }
     });
-}
+
+    }   
+};
+
+document.addEventListener('click', () => open());
 
 </script>
 <main>
@@ -39,7 +38,7 @@
        
     </script>
     
-        <button type="button" id=todoBtn class="flat" >{todo}</button> 
+        <button type="button" id=todoBtn class="collapsible" >{todo}</button> 
         <div class="content">
             <p >Cost of {todo}: $$ </p>
         </div>
