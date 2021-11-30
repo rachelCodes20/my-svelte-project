@@ -12,7 +12,7 @@
         width: 100%;
         margin: 0;
         margin-bottom: 55px;
-        background-color: #22828c;
+        background-color: rgb(31, 124, 237)
     }
     #logo {
         color: white;

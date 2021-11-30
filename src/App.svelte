@@ -63,23 +63,6 @@
 
 <style>
 	
-/* main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-	input {
-	
-	padding: 12px 20px;
-	margin: 8px 0;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	font-size: inherit;
-	margin: 0 auto;
-
-	}  */
-
 
 	@media (min-width: 640px) {
 		main {
