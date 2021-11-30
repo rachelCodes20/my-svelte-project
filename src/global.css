@@ -6,6 +6,13 @@
 	padding: 0;
   }
 
+  p {
+	line-height: 43px;
+	display: inline-block;
+	margin: 0;
+	/* background-color: rgba(250, 250, 250, .2); */
+}
+
   body {
     color: #333;
     margin: 0;
@@ -23,8 +30,7 @@
 	border-radius: 4px;
 	font-size: inherit;
 	width: 300px;
-	text-align: center;
-
+	/* text-align: center; */
 	/* box-sizing: border-box; */
 
 	} 
@@ -35,18 +41,14 @@
 	  text-align: center;
 	}
   
-	.navbar h1 {
-	  margin-bottom: 0.6rem;
-	}
-  
 	.navbar ul {
 	  text-align: center;
 	  justify-content: center;
 	}
+	
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
 	}
 	
@@ -70,7 +72,7 @@
 		padding-left: 16px;
 		padding-right: 16px;
 		position: relative;
-		text-align: left;
+		/* text-align: left; */
 		text-decoration: none;
 		transition: box-shadow .15s,transform .15s;
 		user-select: none;
@@ -88,7 +90,7 @@
 	padding: 18px;
 	width: 100%;
 	border: none;
-	text-align: left;
+	/* text-align: left; */
 	outline: none;
 	font-size: 15px;
   }
@@ -100,19 +102,18 @@
 	padding: 18px;
 	width: 100%;
 	border: none;
-	text-align: left;
+	/* text-align: left; */
 	outline: none;
 	font-size: 15px;
   }
 .content {
 	background-color: rgb(119, 109, 210);
 	padding: 0 18px;
-	/* background-color: white;
-	max-height: 0; */
 	overflow: hidden;
 	transition: max-height 0.2s ease-out;
 	display: none;
 }
+
 
 
   

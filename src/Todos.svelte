@@ -57,12 +57,7 @@ document.addEventListener('click', () => open());
         /* background-color: rgba(250, 250, 250, .2); */
     /* }
      */ 
-    p {
-        line-height: 43px;
-        display: inline-block;
-        margin: 0;
-        /* background-color: rgba(250, 250, 250, .2); */
-    }
+   
   
   
 </style>
