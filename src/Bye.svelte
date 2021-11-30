@@ -7,6 +7,7 @@
    
 <style>
    main {
+
        background-color: rgb(31, 124, 237);
    }
 </style>

@@ -46,7 +46,7 @@
 	  <!-- how can i ensure the field doesn't register an empty string? -->
 	  {#if todo !== ''}
 	  <button type='submit' on:click|preventDefault={submitTodo}>Add Todo</button>
-	  {/if}
+	  {/if} 
 	  </form>
 	  {#if !todos.length}
 		  <p>Add Some Todos!</p>
@@ -58,9 +58,9 @@
 		  {/each}
 		</ol>
 	  {/if}  
-	  <Bye/>
+	  
 </main>
-
+<Bye/>
 <style>
 	
 

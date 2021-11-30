@@ -39,10 +39,12 @@ document.addEventListener('click', () => open());
     </script>
     
         <button type="button" id=todoBtn class="collapsible" >{todo}</button> 
+        <br/>
         <div class="content">
             <p >Cost of {todo}: $$ </p>
         </div>
         <!-- this index will be sent to deleteTodo in App to remove the todo -->
+        <br/>
         <button  on:click={deleteHandler(index)}>X</button><br/>
 </main>
     

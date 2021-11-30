@@ -10,7 +10,6 @@
 	line-height: 43px;
 	display: inline-block;
 	margin: 0;
-	/* background-color: rgba(250, 250, 250, .2); */
 }
 
   body {
@@ -85,15 +84,16 @@
 }
 
 .collapsible {
-	background-color: rgb(29, 18, 126);
+	background-color: rgb(111, 97, 230);
 	color: white;
 	cursor: pointer;
 	padding: 18px;
-	width: 100%;
+	width: 50%;
 	border: none;
 	/* text-align: left; */
 	outline: none;
-	font-size: 15px;
+	padding: 30px;
+	font-size: 30px;
   }
 
   .flat {
